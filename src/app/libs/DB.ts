@@ -19,6 +19,12 @@ export interface User {
   role: "ADMIN" | "SUPER_ADMIN";
 }
 
+export interface Database {
+  rooms: Room[];
+  messages: Message[];
+  users: User[];
+}
+
 const originalDB = {
   rooms: [
     {
@@ -30,6 +36,7 @@ const originalDB = {
       roomName: "261207 Tutorial",
     },
   ],
+
   messages: [
     {
       roomId: "okhkUzffzCGMqtfC1uv6x",
@@ -47,6 +54,7 @@ const originalDB = {
       messageText: "Can anyone teach me RESTFul API?",
     },
   ],
+
   users: [
     { username: "user1", password: "1234", role: "ADMIN" },
     { username: "user2", password: "5678", role: "SUPER_ADMIN" },
